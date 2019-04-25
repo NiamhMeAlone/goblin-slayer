@@ -9,8 +9,8 @@ TagManager:
   - RightFoot
   - LeftHand
   - RightHand
-  - Sword
   - Monster
+  - Weapon
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 153432754683530000}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Sword
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153432754683530095}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.9520001, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  floatPos: {x: 0, y: 1.5, z: 1}
+  floatPos: {x: 0, y: 2, z: 1}
   rotateSpeed: 30
 --- !u!64 &153432754683530000
 MeshCollider:
