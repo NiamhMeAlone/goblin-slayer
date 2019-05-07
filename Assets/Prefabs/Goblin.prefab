@@ -408,7 +408,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeCounter: 0
   attached: 0
-  rb: {fileID: 0}
   despawnTimer: 15
   myMonster: {fileID: 376575751529519828}
   rayStart: {fileID: 376575751948567744}
@@ -480,11 +479,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 376575751860266413}
+  timeCounter: 0
+  animationLength: 1.5
+  attackLimb: {fileID: 376575752072831835}
+  attackInterval: 0.75
   dismemForce: 200
   speed: 1
   health: 5
   moving: 0
   attacking: 0
+  attacked: 0
   head: {fileID: 376575751082560991}
   leftFoot: {fileID: 376575752124016620}
   rightFoot: {fileID: 376575751608680563}
@@ -908,7 +912,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeCounter: 0
   attached: 0
-  rb: {fileID: 0}
   despawnTimer: 15
   myMonster: {fileID: 376575751529519828}
   rayStart: {fileID: 376575751948567744}
@@ -1285,7 +1288,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeCounter: 0
   attached: 0
-  rb: {fileID: 0}
   despawnTimer: 15
   myMonster: {fileID: 376575751529519828}
   rayStart: {fileID: 376575751948567744}
@@ -1737,7 +1739,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeCounter: 0
   attached: 0
-  rb: {fileID: 0}
   despawnTimer: 15
   myMonster: {fileID: 376575751529519828}
   rayStart: {fileID: 376575751948567744}
@@ -2226,7 +2227,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeCounter: 0
   attached: 0
-  rb: {fileID: 0}
   despawnTimer: 15
   myMonster: {fileID: 376575751529519828}
   rayStart: {fileID: 376575751948567744}
@@ -2563,7 +2563,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeCounter: 0
   attached: 0
-  rb: {fileID: 0}
   despawnTimer: 15
   myMonster: {fileID: 376575751529519828}
   rayStart: {fileID: 376575751948567744}

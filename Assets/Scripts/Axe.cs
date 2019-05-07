@@ -2,35 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Axe : OVRGrabbable
+public class Axe : Sword
 {
-    public Vector3 floatPos;
-    public float rotateSpeed;
     public bool thrown = false;
-    public Rigidbody rb;
+    public float throwSpinSpeed;
 
-    private void Awake()
+    protected override void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        base.Start();
+        selected = false;
     }
-    
-    void Update()
-    {
-        if (!isGrabbed && !thrown)
-        {
-            transform.position = floatPos;
-            transform.rotation = Quaternion.Euler(0, Time.time * rotateSpeed, 0);
-        }
-        else if (!isGrabbed)
-        {
 
-        }
+    protected override void Update()
+    {
+        base.Update();
     }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        thrown = true;
-        base.GrabEnd(linearVelocity, angularVelocity);
+        if (linearVelocity.magnitude > .5f)
+        {
+            thrown = true;
+            base.GrabEnd(linearVelocity * 5, angularVelocity * 12);
+        }
+        else
+        {
+            base.GrabEnd(linearVelocity, angularVelocity);
+        }
     }
 
     public void OnCollisionEnter(Collision collision)

@@ -11,6 +11,8 @@ TagManager:
   - RightHand
   - Monster
   - Weapon
+  - Shield
+  - SelectWheel
   layers:
   - Default
   - TransparentFX

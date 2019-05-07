@@ -24,19 +24,14 @@ public class Limb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeCounter += Time.deltaTime;
-        if (timeCounter > 1.5f)
-        {
-            timeCounter -= 1.5f;
-        }
         if (attached && myMonster.moving)
         {
-            transform.localPosition = new Vector3(xCoord.Evaluate(timeCounter), yCoord.Evaluate(timeCounter), zCoord.Evaluate(timeCounter));
+            transform.localPosition = new Vector3(xCoord.Evaluate(myMonster.timeCounter), yCoord.Evaluate(myMonster.timeCounter), zCoord.Evaluate(myMonster.timeCounter));
         }
         else if (attached && myMonster.attacking)
         {
-            transform.localPosition = new Vector3(xCoordAttack.Evaluate(timeCounter), yCoordAttack.Evaluate(timeCounter), zCoordAttack.Evaluate(timeCounter));
-            transform.localRotation = Quaternion.Euler(0, attackingYRot.Evaluate(timeCounter), 0);
+            transform.localPosition = new Vector3(xCoordAttack.Evaluate(myMonster.timeCounter), yCoordAttack.Evaluate(myMonster.timeCounter), zCoordAttack.Evaluate(myMonster.timeCounter));
+            transform.localRotation = Quaternion.Euler(0, attackingYRot.Evaluate(myMonster.timeCounter), 0);
         }
         else
         {

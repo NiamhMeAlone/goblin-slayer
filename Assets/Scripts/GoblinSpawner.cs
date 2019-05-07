@@ -7,7 +7,7 @@ public class GoblinSpawner : MonoBehaviour
     public float goblinTimer;
     public float maxTime, minTime, nextSpawn;
 
-    public float X_OFFSET = 1.75f;
+    public float xOffset = 1.85f;
 
     public GameObject goblinPrefab;
 
@@ -34,6 +34,6 @@ public class GoblinSpawner : MonoBehaviour
     void SpawnGoblin()
     {
         int lane = Random.Range(-1,2);
-        Instantiate(goblinPrefab, transform.position + (Vector3.right * X_OFFSET * lane), Quaternion.Euler(0,180,0));
+        Instantiate(goblinPrefab, transform.position + (Vector3.right * xOffset * lane), Quaternion.Euler(0,180,0));
     }
 }
