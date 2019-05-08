@@ -7,7 +7,6 @@ public class Monster : MonoBehaviour
     public Limb body;
     protected Limb limb1, limb2, limb3, limb4, limb5, limb6, limb7, limb8;
     protected GameObject weapon;
-    protected GameObject player;
     public float timeCounter;
     public float animationLength;
     public Limb attackLimb;
@@ -24,7 +23,6 @@ public class Monster : MonoBehaviour
         {
             weapon = GameObject.FindGameObjectWithTag("Shield");
         }
-        player = GameObject.FindGameObjectWithTag("Player");
         attacked = false;
     }
 
@@ -33,7 +31,19 @@ public class Monster : MonoBehaviour
         timeCounter += Time.deltaTime;
         if (attacking && timeCounter > attackInterval && !attacked)
         {
-            Player.player.health--;
+            Ray shieldRay = new Ray(attackLimb.transform.position, Player.player.transform.position - attackLimb.transform.position);
+            RaycastHit hit;
+            if (Physics.Raycast(shieldRay, out hit, 4f))
+            {
+                if (hit.collider != null && hit.collider.CompareTag("Shield"))
+                {
+                    hit.collider.GetComponent<Shield>().powerStored++;
+                }
+                else
+                {
+                    Player.player.health--;
+                }
+            }
             attacked = true;
         }
         if (timeCounter > animationLength)
@@ -42,16 +52,16 @@ public class Monster : MonoBehaviour
             attacked = false;
         }
         RaycastHit monsterHit;
-        if (Mathf.Abs(transform.position.z - player.transform.position.z) > 1.5f 
+        if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(Player.player.transform.position.x, Player.player.transform.position.z-2)) > 4f 
             && !(Physics.Raycast(transform.position, transform.forward, out monsterHit, 1f) 
             && monsterHit.collider.CompareTag("Monster") 
             && monsterHit.collider.GetComponent<Limb>().myMonster.health > 0))
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, player.transform.position.z), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, Player.player.transform.position.z), speed * Time.deltaTime);
             moving = true;
             attacking = false;
         }
-        else if (Mathf.Abs(transform.position.z - player.transform.position.z) > 1.5)
+        else if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(Player.player.transform.position.x, Player.player.transform.position.z-2)) > 4f)
         {
             moving = true;
             attacking = false;
@@ -60,7 +70,7 @@ public class Monster : MonoBehaviour
         {
             moving = false;
             attacking = true;
-            Vector3 newForward = player.transform.position - transform.position;
+            Vector3 newForward = Player.player.transform.position - transform.position;
             newForward.y = 0;
             transform.forward = newForward.normalized;
         }

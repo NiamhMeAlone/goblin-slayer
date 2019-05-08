@@ -9,6 +9,9 @@ public class WeaponSelect : MonoBehaviour
     public Vector3 rotatingTo;
     public bool rotating;
     public bool removing;
+    public Transform weaponParent;
+    public GameObject goblinSpawner;
+    public Transform Pedestal;
     public Sword[] weapons;
     public int weaponSelected = 0;
 
@@ -40,10 +43,10 @@ public class WeaponSelect : MonoBehaviour
             }
             if (rotating)
             {
-                transform.rotation = Quaternion.Euler(Vector3.MoveTowards(transform.rotation.eulerAngles, rotatingTo, Time.deltaTime * 100));
-                if (Vector3.Distance(transform.rotation.eulerAngles, rotatingTo) < 1)
+                weaponParent.rotation = Quaternion.Euler(Vector3.MoveTowards(weaponParent.rotation.eulerAngles, rotatingTo, Time.deltaTime * 100));
+                if (Vector3.Distance(weaponParent.rotation.eulerAngles, rotatingTo) < 1)
                 {
-                    transform.rotation = Quaternion.Euler(rotatingTo);
+                    weaponParent.rotation = Quaternion.Euler(rotatingTo);
                     rotating = false;
                     weapons[weaponSelected].selected = false;
                     weaponSelected++;
@@ -54,14 +57,15 @@ public class WeaponSelect : MonoBehaviour
                     weapons[weaponSelected].selected = true;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.R))
+            if (!removing && Input.GetKeyDown(KeyCode.R))
             {
                 removing = true;
+                Instantiate(goblinSpawner);
             }
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.down * 10, Time.deltaTime * 5);
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.down * 10, Time.deltaTime * 3);
             if (transform.position.y < -8)
             {
                 Destroy(gameObject);
