@@ -61,6 +61,11 @@ public class WeaponSelect : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (Pedestal)
+        {
+            Pedestal.rotation = Quaternion.Euler(Pedestal.rotation.eulerAngles + Vector3.up * Time.deltaTime * 3);
+            Pedestal.localPosition = Vector3.up * Mathf.Sin(Time.time) / 15;
+        }
     }
 
     public void Rotate()
