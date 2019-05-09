@@ -28,8 +28,16 @@ public class Monster : MonoBehaviour
 
     public virtual void Update()
     {
+        if (weapon == null)
+        {
+            weapon = GameObject.FindGameObjectWithTag("Weapon");
+        }
+        if (weapon == null)
+        {
+            weapon = GameObject.FindGameObjectWithTag("Shield");
+        }
         timeCounter += Time.deltaTime;
-        if (attacking && timeCounter > attackInterval && !attacked)
+        if (attackLimb && attacking && timeCounter > attackInterval && !attacked)
         {
             Ray shieldRay = new Ray(attackLimb.transform.position, Player.player.transform.position - attackLimb.transform.position);
             RaycastHit hit;

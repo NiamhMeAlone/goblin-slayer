@@ -32,14 +32,9 @@ public class WeaponSelect : MonoBehaviour
     private void Update()
     {
         if (!removing) {
-            if (!rotating && Input.GetKeyDown(KeyCode.Space))
+            if (OVRInput.GetDown(OVRInput.Button.Two))
             {
-                rotatingTo = rotatingTo + Vector3.up * 120;
-                rotating = true;
-            }
-            if (rotatingTo.y > 360)
-            {
-                rotatingTo = rotatingTo - Vector3.up * 360;
+                Rotate();
             }
             if (rotating)
             {
@@ -57,11 +52,6 @@ public class WeaponSelect : MonoBehaviour
                     weapons[weaponSelected].selected = true;
                 }
             }
-            if (!removing && Input.GetKeyDown(KeyCode.R))
-            {
-                removing = true;
-                Instantiate(goblinSpawner);
-            }
         }
         else
         {
@@ -70,6 +60,28 @@ public class WeaponSelect : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    public void Rotate()
+    {
+        if (!rotating)
+        {
+            rotatingTo = rotatingTo + Vector3.up * 120;
+            rotating = true;
+        }
+        if (rotatingTo.y > 360)
+        {
+            rotatingTo = rotatingTo - Vector3.up * 360;
+        }
+    }
+
+    public void Remove()
+    {
+        if (!removing)
+        {
+            removing = true;
+            Instantiate(goblinSpawner);
         }
     }
 

@@ -9,10 +9,10 @@ public class Goblin : Monster
     public override void Start()
     {
         base.Start();
-        limb1 = head;
-        limb2 = leftFoot;
-        limb3 = rightFoot;
-        limb4 = leftHand;
-        limb5 = rightHand;
+        limb1 = leftFoot;
+        limb2 = rightFoot;
+        limb3 = leftHand;
+        limb4 = rightHand;
+        limb5 = head;
     }
 }

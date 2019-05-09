@@ -20,14 +20,12 @@ public class Axe : Sword
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        if (linearVelocity.magnitude > .5f)
+        base.GrabEnd(linearVelocity * 5, angularVelocity);
+        if ((linearVelocity * 5).magnitude > 5)
         {
             thrown = true;
-            base.GrabEnd(linearVelocity * 5, angularVelocity * 12);
-        }
-        else
-        {
-            base.GrabEnd(linearVelocity, angularVelocity);
+            angularVelocity = new Vector3(40, 0, 0);
+            rb.angularVelocity = transform.TransformVector(angularVelocity);
         }
     }
 
