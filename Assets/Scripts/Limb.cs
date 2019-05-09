@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Limb : MonoBehaviour
+public class Limb : OVRGrabbable
 {
     public AnimationCurve xCoord, yCoord, zCoord;
     public AnimationCurve xCoordAttack, yCoordAttack, zCoordAttack;
@@ -14,7 +14,7 @@ public class Limb : MonoBehaviour
     public Transform rayStart;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         timeCounter = 0;
         attached = true;
@@ -40,6 +40,14 @@ public class Limb : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
+    {
+        if (!attached)
+        {
+            base.GrabBegin(hand, grabPoint);
         }
     }
 }
