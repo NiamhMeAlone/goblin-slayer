@@ -484,7 +484,7 @@ MonoBehaviour:
   attackLimb: {fileID: 376575752072831835}
   attackInterval: 0.75
   dismemForce: 200
-  speed: 1
+  speed: 1.25
   health: 5
   moving: 0
   attacking: 0

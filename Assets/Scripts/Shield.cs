@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shield : Sword
 {
     public int powerStored;
+    public Light light;
 
     protected override void Start()
     {
@@ -16,11 +17,13 @@ public class Shield : Sword
     protected override void Update()
     {
         base.Update();
+
     }
 
     public void IncreasePower()
     {
         powerStored++;
+        light.intensity = Mathf.Min(4, powerStored);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,6 +32,7 @@ public class Shield : Sword
         {
             collision.gameObject.GetComponent<Limb>().myMonster.health -= powerStored;
             powerStored = 0;
+            light.intensity = 0;
         }
     }
 }

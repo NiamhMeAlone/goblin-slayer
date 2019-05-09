@@ -726,11 +726,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
-    - target: {fileID: 6137295150036052319, guid: a0e7e1f6542b80148a9d159254ac3919,
-        type: 3}
-      propertyPath: m_TagString
-      value: Shield
-      objectReference: {fileID: 0}
     - target: {fileID: 6315136841608955093, guid: a0e7e1f6542b80148a9d159254ac3919,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -785,21 +780,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6315136841608955093, guid: a0e7e1f6542b80148a9d159254ac3919,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6315136841608955093, guid: a0e7e1f6542b80148a9d159254ac3919,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6315136841608955093, guid: a0e7e1f6542b80148a9d159254ac3919,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6137295150036052312, guid: a0e7e1f6542b80148a9d159254ac3919,
         type: 3}
