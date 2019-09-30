@@ -22,6 +22,7 @@ public class Sword : OVRGrabbable
     {
         selectMode = true;
         selected = true;
+        m_snapOffset = GameObject.FindGameObjectWithTag(gameObject.name + "Offset").transform;
     }
 
     // Update is called once per frame

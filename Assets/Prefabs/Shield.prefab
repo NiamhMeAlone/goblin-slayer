@@ -324,6 +324,7 @@ MonoBehaviour:
   selected: 0
   returning: 0
   powerStored: 0
+  shieldLight: {fileID: 154299311333778562}
 --- !u!1 &7297657550708616720
 GameObject:
   m_ObjectHideFlags: 0

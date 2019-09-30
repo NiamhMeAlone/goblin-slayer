@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9380016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.793, z: 0}
+  m_LocalPosition: {x: 0, y: 1.35, z: -0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 744699654}
   m_Layer: 0
   m_Name: SwordOffset
-  m_TagString: Untagged
+  m_TagString: SwordOffset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,36 +652,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 153432754683530003, guid: eeafc98b00cfb0b41877ed41cd82851b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 153432754683530003, guid: eeafc98b00cfb0b41877ed41cd82851b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 153432754683530003, guid: eeafc98b00cfb0b41877ed41cd82851b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 153432754683530005, guid: eeafc98b00cfb0b41877ed41cd82851b,
-        type: 3}
-      propertyPath: m_grabPoints.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 153432754683530005, guid: eeafc98b00cfb0b41877ed41cd82851b,
-        type: 3}
-      propertyPath: m_snapOffset
-      value: 
-      objectReference: {fileID: 744699654}
-    - target: {fileID: 153432754683530005, guid: eeafc98b00cfb0b41877ed41cd82851b,
-        type: 3}
-      propertyPath: m_grabPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1431163192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeafc98b00cfb0b41877ed41cd82851b, type: 3}
 --- !u!1 &1019219250
@@ -695,7 +665,7 @@ GameObject:
   - component: {fileID: 1019219251}
   m_Layer: 0
   m_Name: AxeOffset
-  m_TagString: Untagged
+  m_TagString: AxeOffset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -781,11 +751,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6137295150036052312, guid: a0e7e1f6542b80148a9d159254ac3919,
-        type: 3}
-      propertyPath: m_snapOffset
-      value: 
-      objectReference: {fileID: 1501520334}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e7e1f6542b80148a9d159254ac3919, type: 3}
 --- !u!1001 &1317007800
@@ -979,12 +944,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1431163192 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 153432754683530000, guid: eeafc98b00cfb0b41877ed41cd82851b,
-    type: 3}
-  m_PrefabInstance: {fileID: 966977906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1501520333
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +955,7 @@ GameObject:
   - component: {fileID: 1501520334}
   m_Layer: 0
   m_Name: ShieldOffset
-  m_TagString: Untagged
+  m_TagString: ShieldOffset
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1026,11 +985,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 791147280565806562, guid: ce72b4d293c5f744898ebd6a15a1710e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 978197530426435094, guid: ce72b4d293c5f744898ebd6a15a1710e,
         type: 3}
@@ -1087,31 +1041,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 978197530426435094, guid: ce72b4d293c5f744898ebd6a15a1710e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 978197530426435094, guid: ce72b4d293c5f744898ebd6a15a1710e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 978197530426435094, guid: ce72b4d293c5f744898ebd6a15a1710e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 791147280565806589, guid: ce72b4d293c5f744898ebd6a15a1710e,
-        type: 3}
-      propertyPath: m_snapOffset
-      value: 
-      objectReference: {fileID: 1019219251}
-    - target: {fileID: 3845309109830104952, guid: ce72b4d293c5f744898ebd6a15a1710e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce72b4d293c5f744898ebd6a15a1710e, type: 3}
 --- !u!1001 &1529988265
@@ -1139,7 +1068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4660621310658468, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4660621310658468, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_LocalRotation.x

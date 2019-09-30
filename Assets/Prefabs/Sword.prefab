@@ -112,11 +112,15 @@ MonoBehaviour:
   m_snapPosition: 1
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
-  m_grabPoints: []
+  m_grabPoints:
+  - {fileID: 153432754683530000}
   floatPos: {x: 0, y: 0.5, z: -1.5}
+  rb: {fileID: 0}
   rotateSpeed: 30
+  hand: {fileID: 0}
   selectMode: 0
   selected: 0
+  returning: 0
 --- !u!64 &153432754683530000
 MeshCollider:
   m_ObjectHideFlags: 0

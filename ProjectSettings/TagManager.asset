@@ -13,6 +13,9 @@ TagManager:
   - Weapon
   - Shield
   - SelectWheel
+  - SwordOffset
+  - AxeOffset
+  - ShieldOffset
   layers:
   - Default
   - TransparentFX
